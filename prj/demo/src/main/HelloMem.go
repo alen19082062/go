@@ -7,7 +7,6 @@ import (
 )
 
 // 内存使用情况
-
 func init() {
 	t0 := time.Now()      // 起点时间
 	fmt.Println("init() .... ")
@@ -63,7 +62,6 @@ func main() {
 		runtime.GC()
 		fmt.Println("GC() end ...  " )
 		time.Sleep(10 * time.Second) // Give GC time to run
-
 
 	}
 }

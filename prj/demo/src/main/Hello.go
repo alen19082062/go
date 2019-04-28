@@ -11,7 +11,7 @@ func init() {
 	fmt.Println("init() .... ")
 	fmt.Printf("[%s / %s] CPU NUMBER = %d  Version: %s,\n", runtime.GOARCH, runtime.GOOS, runtime.NumCPU(), runtime.Version() )
 	// ？？？ 此处有问题，怎么只有一个协程
-	//runtime.ReadMemStats();
+	// runtime.ReadMemStats();
 	// runtime.StartTrace()
 	fmt.Println("GO NumGoroutine : " , runtime.NumGoroutine())
 

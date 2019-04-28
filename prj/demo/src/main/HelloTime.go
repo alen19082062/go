@@ -52,7 +52,7 @@ func main() {
 	//fmt.Println(t.Format(time.RFC822)) // 21 Dec 11 0852 UTC
 	//fmt.Println(t.Format(time.ANSIC)) // Wed Dec 21 08:56:34 2011
 
-	println("layout ... ");
+	println("Time layout : ");
 	//fmt.Println(t.Format("02 Jan 2006 15:04:02")) // 21 Dec 2011 08:52
 	//s := t.Format("2006-01-02")
 	//fmt.Println("--- ", t, "=>", s)
@@ -60,14 +60,14 @@ func main() {
 
 	// 时间 to 时间戳
 	//设置时区
-	println("时间 --> 时间戳 ... ");
+	println("时间 --> 时间戳 : ");
 	loc, _ := time.LoadLocation("Asia/Shanghai")
 	//2006-01-02 15:04:05是转换的格式如php的"Y-m-d H:i:s"
 	tt, _ := time.ParseInLocation("2006-01-02 15:04:05", "2018-07-11 15:07:51", loc)
 	fmt.Println("Unix time : " ,tt.Unix())
 
 	// 时间戳 to 时间
-	println("时间戳 --> 时间 ... ");
+	println("时间戳 --> 时间 : ");
 	tm := time.Unix(1531293019, 0)
 	fmt.Println(tm.Format("2006-01-02 15:04:05")) //2018-07-11 15:10:19
 

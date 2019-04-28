@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// 生产者，第一流水线
 func producer(nums ...int) <-chan int {
 	out := make(chan int)
 	go func() {
@@ -25,7 +26,7 @@ func square(inCh <-chan int) <-chan int {
 }
 
 func main() {
-	in := producer(1, 2, 3, 4)
+	in := producer(1, 2, 3, 4,5)
 	ch := square(in)
 
 	// consumer

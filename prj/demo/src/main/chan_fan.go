@@ -5,6 +5,7 @@ import (
 	"sync"
 )
 
+// 生产者
 func producer3(n int) <-chan int {
 	out := make(chan int)
 	go func() {
@@ -16,6 +17,7 @@ func producer3(n int) <-chan int {
 	return out
 }
 
+// 继续加工
 func square3(inCh <-chan int) <-chan int {
 	out := make(chan int)
 	go func() {
